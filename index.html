@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+   <head>
+       <title>Cálculo do IMC !</title>
+        <meta charset = "utf-8">   
+      <script>
+          calcularIMC = function (){
+            var formulario = document.getElementById("formulario");
+
+            var kilos = +formulario.quilos.value;    
+            var metros = +formulario.metros.value;  
+            var centimetros = +formulario.centimetros.value;
+
+            var altura = (metros*100 + centimetros)/100;    
+            var imc = kilos / (altura * altura);    
+            formulario.imc.value = imc.toFixed(2);
+}
+          </script>
+          <style type="text/css">
+            fieldset { width:140px; }
+            label { display:-ms-grid; float:left;}
+            label, input {width:68px; margin:3px 0; }
+            </style>
+    </head>
+    <body>
+            <img src="img/imc.png" alt="imc"/>
+            <from id="formulario">
+                <fieldset>
+                    <legend>Cálculo do IMC</legend>
+        
+                    <label for="kilos">Quilos:</label>
+                    <input type="text" name="quilos"/>          
+        
+                    <label for="metros">Metros:</label>
+                    <input type="text" name="metros"/>
+        
+                    <label for="centimetros">Cm:</label>
+                    <input type="text" name="centimetros"/>
+        
+                    <label for="imc">IMC:</label>
+                    <input type="text" name="imc" disabled="disabled"/>
+        
+                    <a href="#" onclick="calcularIMC()">Calcular</a>
+                    </fieldset>
+                </form>
+            </body>
+        </html># Trabalhos-UFG
