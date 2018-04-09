@@ -3,11 +3,11 @@
    <head>
        <title>Cálculo do IMC !</title>
         <meta charset = "utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" 
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
         crossorigin="anonymous">
-
       <script>
           calcularIMC = function (){
             var peso = parseFloat(document.getElementById("peso").value);    
@@ -67,7 +67,40 @@
                          type = "text"
                          class="form-control input-md"><br>
                     </div>
-            </div><br>            
+            </div><br>  
+            <!-- Tabela -->
+                <table class = "table table-striped table-condensed table-bordered table-hover" 
+                    id = "tabelaIMC">
+                    <thead>
+                        <tr>
+                             <th>Classificação</th> 
+                             <th>IMC</th>         
+                             <th>Peso</th>
+                        </tr>
+                    </thead>
+                    <tbody>   
+                        <tr id = "magreza">
+                              <td>Magreza</td>
+                              <td>< 18.5</td>      
+                              <td>< 55.4 Kg</td>
+                        </tr>
+                        <tr id = "normal">
+                              <td>Normal</td>	     
+                              <td>18.5 a 24.9</td> 
+                              <td>55.4 a 74.5 Kg</td>
+                        </tr>
+                        <tr id = "sobrepeso">
+                            <td>Sobrepeso</td>  	 
+                            <td>24.9 a 30</td>	  
+                            <td>74.5 a 89.8 Kg</td>
+                        </tr>
+                        <tr id = "obesidade">
+                            <td>Obesidade</td>	 
+                            <td> 30</td>	      
+                            <td> 89.8 Kg</td>
+                        </tr>
+                    </tbody>
+                </table>
             </fieldset>
             </form>
             
